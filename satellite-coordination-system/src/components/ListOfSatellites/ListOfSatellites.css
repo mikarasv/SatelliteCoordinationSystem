@@ -1,0 +1,53 @@
+.table {
+    font-family: Courier, "Lucida Console", monospace, cursive;
+    overflow-y: auto;
+    height: 90%;
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    border-collapse: collapse;
+}
+
+.table th{
+    border: 1px solid black;
+    padding: 0.5%;
+    color: white;
+    background-color: darkblue;
+}
+
+.table td{
+    border: 1px solid black;
+    padding: 0% 0.5%;
+}
+
+.tbody tr{
+    color: green;
+}
+
+.td{
+    background-color: white;
+    color: black;
+}
+
+/* width */
+::-webkit-scrollbar {
+    scroll-behavior: smooth !important;
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    border: 1px solid white;
+    border-radius: 10px !important;
+    background: grey;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkblue;
+    outline: 1px solid slategrey !important;
+    border-radius: 10px !important;
+}
+
+.check{
+    zoom: 2;
+    margin-left: 45%;
+}
