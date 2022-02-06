@@ -5,28 +5,30 @@
 }
 
 .table_fixed_header thead {
-    background: darkblue;
+    background: steelblue;
     color:#fff;
     font-size: 20px;
-    text-decoration-color: darkblue;
 }
 
 .table_fixed_header tbody{
+    background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
     position: absolute;
     overflow: auto;
-    max-height: 65%;
+    max-height: 80%;
+    color: white;
 }
 
 .table_fixed_header th, td{
-    border: 1px solid black;
+    border: 1px solid gray;
     padding: 0.5%;
     width: 5%;
 }
 
 .container {
     font-family: Courier, "Lucida Console", monospace, cursive;
-    justify-content: left;
+    font-size: 15px;
     position: absolute;
-    bottom: 1%;
-    left: 0.5%;
+    top: 1%;
+    right: 0.5%;
+    color: white;
 }

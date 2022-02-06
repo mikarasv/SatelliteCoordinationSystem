@@ -2,8 +2,9 @@
   margin-left: 1%;
   font-size: 35px;
   font-family: Courier, "Lucida Console", monospace, cursive;
+  color: white;
 }
 
 .background { 
-  
+  background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
 }
