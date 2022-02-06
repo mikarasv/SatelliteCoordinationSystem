@@ -9,6 +9,10 @@ export default function ListOfSattellites() {
   const [value, setValue] = useState(false);
 
 	useEffect(()=>{
+		fetch('https://api.spacexdata.com/v5/launches/')
+			.then(response => response.json())
+			.then(setList);
+
     const listener = event => {
       if (event.code === "Enter" || event.code === "NumpadEnter") {
         event.preventDefault();
@@ -17,11 +21,7 @@ export default function ListOfSattellites() {
     document.addEventListener("keydown", listener);
     return () => {
       document.removeEventListener("keydown", listener);
-    };
-		fetch('https://api.spacexdata.com/v5/launches/')
-			.then(response => response.json())
-			.then(setList);
-		}, []);
+    }}, []);
 
   const filterNames = (names, query) => {
     if (!query) {
