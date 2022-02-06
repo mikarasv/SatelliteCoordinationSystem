@@ -1,0 +1,30 @@
+.visually-hidden {
+    clip: rect(10 10 10 10);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: auto;
+    position: absolute;
+    white-space: ;
+    width: 20px;
+}
+
+.searcher {
+    font-family: Courier, "Lucida Console", monospace, cursive;
+}
+
+.button {
+    font-family: Courier, "Lucida Console", monospace, cursive;
+    font-size: 20px;
+    padding: 0.5%;
+}
+
+input {
+    width: 30%;
+    padding: 0% 0.5%;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 2;
+}
