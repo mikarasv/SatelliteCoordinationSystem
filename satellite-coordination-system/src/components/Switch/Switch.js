@@ -4,7 +4,7 @@ import "./Switch.css";
 
 export default function Switch(isOn, handleToggle) {
 	return (
-		<div> 
+		<div className="switch">
       <input
         checked={isOn}
         onChange={handleToggle}

@@ -1,7 +1,8 @@
 import React from "react";
 import "./ListOfSatellites.css";
 import Switch from "../Switch/Switch.js";
-import SearchName from "../SearchName/SearchName.js";
+import Search from "../Search/Search.js";
+import FilterDate from "../FilterDate/FilterDate.js";
 import {useEffect, useState, useRef} from 'react';
 
 export default function ListOfSattellites() {
@@ -31,19 +32,39 @@ export default function ListOfSattellites() {
     return names.filter((item) => {
         const postItem = item.name.toLowerCase();
         return postItem.includes(query) || item.name.includes(query);
+        // return postItem <= query || item.name <= query;
+    });
+  };
+
+  const filterDates = (dates, query) => {
+    console.log(query)
+    if (!query) {
+        return dates;
+    }
+
+    return dates.filter((item) => {
+        return item.date_utc > query;
     });
   };
 
   const { search } = window.location;
   const query = new URLSearchParams(search).get('s');
-  const [searchQuery, setSearchQuery] = useState(query || '');
-  const filteredNames = filterNames(list, searchQuery);
+  const [searchName, setSearchName] = useState(query || '');
+  const [searchDate, setSearchDate] = useState(query || '');
+  var filteredData = filterNames(list, searchName);
+  filteredData = filterDates(filteredData, searchDate);
 
 	return (
 		<div>
-      <SearchName
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
+      <Search
+        searchQuery={searchName}
+        setSearchQuery={setSearchName}
+        placeholder="Search a satellite name"
+      />
+      <FilterDate
+        searchQuery={searchDate}
+        setSearchQuery={setSearchDate}
+        placeholder="Search for launched after utc date"
       />
       <table className="table_fixed_header">
     		<thead>
@@ -54,7 +75,7 @@ export default function ListOfSattellites() {
     			</tr>
     		</thead>
     		<tbody>
-    			{filteredNames.sort((a, b) => a.name.localeCompare(b.name))
+    			{filteredData.sort((a, b) => a.name.localeCompare(b.name))
             .map((item) => (
               (value && item.success &&
               <tr key={item.name}>
@@ -72,7 +93,8 @@ export default function ListOfSattellites() {
     		</tbody>
     	</table>
       <div className="container"> 
-        {Switch(value, () => setValue(!value))} Show only successful launches
+        <label className="switch-label">Show only successful launches</label>
+        {Switch(value, () => setValue(!value))} 
       </div> 
     </div>
 	)

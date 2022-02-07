@@ -1,0 +1,15 @@
+label {
+    font-family: Courier, "Lucida Console", monospace, cursive;
+    font-size: 15px;
+    color: white;
+}
+
+.filter-date {
+    width: 25%;
+    padding: 0.6%;
+    font-size: 20px;
+}
+
+.filter-date,
+.filter-date::-webkit-input-placeholder {
+}

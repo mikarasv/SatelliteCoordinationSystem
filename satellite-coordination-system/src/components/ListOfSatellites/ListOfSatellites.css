@@ -14,7 +14,7 @@
     background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
     position: absolute;
     overflow: auto;
-    max-height: 80%;
+    max-height: 72%;
     color: white;
 }
 
@@ -28,7 +28,9 @@
     font-family: Courier, "Lucida Console", monospace, cursive;
     font-size: 15px;
     position: absolute;
-    top: 1%;
-    right: 0.5%;
+    top: 10%;
+    right: 0%;
     color: white;
 }
+
+
