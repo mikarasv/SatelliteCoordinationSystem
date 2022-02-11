@@ -55,25 +55,26 @@ export default function ListOfSattellites() {
 
 	return (
 		<div>
+      <div className="text-description">
+        <p> Search for a satellite name </p>
+        <p> Search for satellites launched after </p>
+        <p> Show only successful launches</p>
+      </div>
       <div className="functional">
         <Search
           searchQuery={searchName}
           setSearchQuery={setSearchName}
-          placeholder="Search a satellite name"
+          placeholder="Search..."
         />
         <FilterDate
           searchQuery={searchDate}
           setSearchQuery={setSearchDate}
           placeholder="Search for launched after utc date"
         />
-        {/*<div class="tooltip">*/}
-          <Switch
-            className="show-all"
-            isOn ={value}
-            handleToggle= {() => setValue(!value)}
-          />
-          {/*<span class="tooltiptext">Show only successful launches</span>
-        </div>*/}
+        <Switch
+          isOn ={value}
+          handleToggle= {() => setValue(!value)}
+        />
       </div>
       <div className="table_container">
         <table className="table_fixed_header">

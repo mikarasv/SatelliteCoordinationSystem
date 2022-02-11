@@ -1,6 +1,8 @@
 .filter-date {
-    padding: 1%;
+    height: 100%;
+    margin-left: 3%;
+}
+
+.date-input {
     font-size: 20px;
-    position: relative;
-    margin-left: 50%;
 }

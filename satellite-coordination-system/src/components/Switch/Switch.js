@@ -5,9 +5,9 @@ const Switch = ({isOn, handleToggle}) => {
 	return (
 		<div className="switch">
       <input
+        className="react-switch-checkbox"
         checked={isOn}
         onChange={handleToggle}
-        className="react-switch-checkbox"
         id={`react-switch-new`}
         type="checkbox"
       /> 

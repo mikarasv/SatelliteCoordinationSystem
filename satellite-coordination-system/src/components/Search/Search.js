@@ -5,7 +5,7 @@ import "./Search.css";
 const Search = ({ searchQuery, setSearchQuery, placeholder }) => (
     <div className="container-search">
          <input
-             className="searcher"
+            className="seartch-input"
              value={searchQuery}
              onInput={e => setSearchQuery(e.target.value)}
              onKeyDown={e => setSearchQuery(e.target.value)}
@@ -14,7 +14,6 @@ const Search = ({ searchQuery, setSearchQuery, placeholder }) => (
              placeholder={placeholder}
              // name="s" 
          />
-         <div className="search"></div>
      </div>
 );
 
