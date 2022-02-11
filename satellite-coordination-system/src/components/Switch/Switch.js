@@ -1,10 +1,10 @@
 import React from 'react'
 import "./Switch.css";
 
-
 export default function Switch(isOn, handleToggle) {
 	return (
 		<div className="switch">
+			<label className="slabel">Show only successful launches</label>
       <input
         checked={isOn}
         onChange={handleToggle}
@@ -19,6 +19,6 @@ export default function Switch(isOn, handleToggle) {
 			> 
         <span className={`react-switch-button`} />
       </label>
-		</div> 
+ 		</div> 
 	)
 }

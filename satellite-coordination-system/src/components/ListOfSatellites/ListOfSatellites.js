@@ -32,7 +32,6 @@ export default function ListOfSattellites() {
     return names.filter((item) => {
         const postItem = item.name.toLowerCase();
         return postItem.includes(query) || item.name.includes(query);
-        // return postItem <= query || item.name <= query;
     });
   };
 
@@ -66,12 +65,14 @@ export default function ListOfSattellites() {
         setSearchQuery={setSearchDate}
         placeholder="Search for launched after utc date"
       />
+      {Switch(value, () => setValue(!value))}
       <table className="table_fixed_header">
     		<thead>
     			<tr>
     				<th>Name</th>
     				<th>UTC Date</th>
             <th>Succesful</th>
+            <th>Photo</th>
     			</tr>
     		</thead>
     		<tbody>
@@ -82,20 +83,22 @@ export default function ListOfSattellites() {
                 <td>{item.name}</td>
                 <td>{item.date_utc}</td>
                 <td>{(item.success && "Yes") || "No"}</td>
+                <td className="satllite-image">
+                  <img width="50" height="50" src={item.links.patch.small}/>
+                </td>
               </tr>) || 
               (!value &&
               <tr key={item.name}>
                 <td>{item.name}</td>
                 <td>{item.date_utc}</td>
                 <td>{(item.success && "Yes") || "No"}</td>
+                <td>
+                  <img width="50" height="50" src={item.links.patch.small}/>
+                </td>
               </tr>)
     			))}
     		</tbody>
     	</table>
-      <div className="container"> 
-        <label className="switch-label">Show only successful launches</label>
-        {Switch(value, () => setValue(!value))} 
-      </div> 
     </div>
 	)
 }

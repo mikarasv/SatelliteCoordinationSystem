@@ -1,10 +1,12 @@
 .header {
-  margin-left: 1%;
+  margin-left: 0.5%;
   font-size: 35px;
   font-family: Courier, "Lucida Console", monospace, cursive;
   color: white;
 }
 
 .background { 
+  min-height: 100vh;
+  max-width: 100%;
   background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
 }
