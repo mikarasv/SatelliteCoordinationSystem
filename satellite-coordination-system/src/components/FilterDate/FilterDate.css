@@ -1,8 +1,21 @@
 .filter-date {
     height: 100%;
-    margin-left: 3%;
+    width: 100%;
 }
 
 .date-input {
+    margin-left: -5%;
+    color: white;
     font-size: 20px;
+    padding: 5% 5%;
+    border-radius: 15px;
+    background: steelblue;
+    border: hidden;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Calendar_Icon_White.svg/1200px-Calendar_Icon_White.svg.png); 
+    background-repeat: no-repeat;
+    height: 20px;
+    background-size: contain;
 }

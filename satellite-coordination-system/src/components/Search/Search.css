@@ -1,9 +1,52 @@
-.container-search {
-    font-family: Courier, "Lucida Console", monospace, cursive;
+.search-box {
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  background: steelblue;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  color: white;
 }
 
-.seartch-input {
-    width: 90%;
-    padding: 1%;
-    font-size: 20px;
+.search-box:hover > .search-text{
+  width: 200px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHaFbU4mtvdf4RuPvz9sHqmgQJoCea8EzVJg&usqp=CAU");
+}
+
+.search-btn {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHaFbU4mtvdf4RuPvz9sHqmgQJoCea8EzVJg&usqp=CAU");
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;  
+}
+.search-btn > i {
+  font-size: 30px;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  font-size: 15px;
+  font-weight: normal;
+  transition: 0.4s;
+  line-height: 30px;
+  width: 0px;  
+}
+
+#inputID::placeholder {
+    color: white;
+    opacity: 0.5;
 }
