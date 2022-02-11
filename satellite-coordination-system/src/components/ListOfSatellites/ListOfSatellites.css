@@ -1,36 +1,84 @@
 .table_fixed_header{
-    font-family: Courier, "Lucida Console", monospace, cursive;
-    table-layout: fixed;
-    border-collapse: collapse;
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 
-.table_fixed_header thead {
-    background: steelblue;
-    color:#fff;
-    font-size: 20px;
+.table_container {
+  overflow-y: 1;
+  height: 80vh;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  overflow-x: hidden;
+}
+.table_container thead th {
+  position: sticky;
+  background: steelblue;
+  color:#fff;
+  font-size: 20px;
+  top: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tbody{
+  background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
+  overflow: auto;
+  color: white;
+}
+td {
+  border: 1px solid gray;
+  padding: 0.5%;
+  text-align: center;
+  width: 5%;
 }
 
-.table_fixed_header tbody{
-    background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
-    position: absolute;
-    overflow: auto;
-    color: white;
+.functional {
+  display: flex;
 }
 
-.table_fixed_header th, td{
-    border: 1px solid gray;
-    padding: 0.5%;
-    width: 5%;
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  padding: 5px 0;
+  border-radius: 6px;
+  margin-right: 10%;
 }
 
-.container {
-    font-family: Courier, "Lucida Console", monospace, cursive;
-    font-size: 15px;
-    position: absolute;
-    top: 0%;
-    right: 0%;
-    color: white;
+/* Tooltip text */
+.tooltiptext {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  align-items: center;
+  border-radius: 6px;
+
+
+  /* Position the tooltip text */
+  position: absolute;
+
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
 
-
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

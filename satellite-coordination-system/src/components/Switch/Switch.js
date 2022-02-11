@@ -1,10 +1,9 @@
 import React from 'react'
 import "./Switch.css";
 
-export default function Switch(isOn, handleToggle) {
+const Switch = ({isOn, handleToggle}) => {
 	return (
 		<div className="switch">
-			<label className="slabel">Show only successful launches</label>
       <input
         checked={isOn}
         onChange={handleToggle}
@@ -13,7 +12,7 @@ export default function Switch(isOn, handleToggle) {
         type="checkbox"
       /> 
 			<label
-			  style={{ background: isOn && '#06D6A0' }}
+			  style={{ background: isOn && 'steelblue' }}
 			  className="react-switch-label"
 			  htmlFor={`react-switch-new`}
 			> 
@@ -22,3 +21,5 @@ export default function Switch(isOn, handleToggle) {
  		</div> 
 	)
 }
+
+export default Switch;

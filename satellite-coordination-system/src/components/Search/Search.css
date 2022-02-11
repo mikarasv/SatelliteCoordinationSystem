@@ -1,6 +1,7 @@
 .searcher {
     font-family: Courier, "Lucida Console", monospace, cursive;
-    width: 25%;
-    padding: 0.7%;
-    font-size: 20px;
+    width: 120%;
+    height: 75%;
+    font-size: 17px;
+    margin-left: 5%;
 }

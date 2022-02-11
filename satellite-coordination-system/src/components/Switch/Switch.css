@@ -1,3 +1,9 @@
+label {
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  font-size: 15px;
+  color: white;
+}
+
 .react-switch-checkbox {
   height: 0;
   width: 0;
@@ -13,10 +19,11 @@
   background: grey;
   border-radius: 90px;
   transition: background-color .2s;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
 }
 
 .react-switch-button {
-  content: '';
   position: absolute;
   top: 2px;
   left: 2px;
@@ -29,10 +36,6 @@
 }
 
 .react-switch-label .react-switch-button {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
   width: 35px;
   height: 35px;
   border-radius: 45px;
@@ -52,8 +55,5 @@
 
 .switch {
   display: flex;
-}
-
-.slabel { 
-  margin-top: 1%;
+  margin-left: 10%;
 }
