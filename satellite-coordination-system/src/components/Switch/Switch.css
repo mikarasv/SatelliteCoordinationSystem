@@ -6,8 +6,8 @@
 .react-switch-label {
   position: relative;
   cursor: pointer;
-  width: 90px;
-  height: 45px;
+  width: 80px;
+  height: 40px;
   background: grey;
   border-radius: 90px;
   transition: background-color .2s;
@@ -24,8 +24,8 @@
 }
 
 .react-switch-label .react-switch-button {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   border-radius: 45px;
   transition: 0.2s;
   background: #fff;

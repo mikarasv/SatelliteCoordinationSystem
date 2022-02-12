@@ -1,12 +1,19 @@
 .main-header {
-  font-size: 40px;
+  font-size: 60px;
   margin-left: 1%;
   font-family: Courier, "Lucida Console", monospace, cursive;
   color: white;
+  text-shadow: -1px -1px 15px lightblue;
+  text-align: center;
 }
 
 .background { 
   min-height: 100vh;
   max-width: 100%;
-  background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
+  /*background-image: url("https://wallpaperaccess.com/full/2217435.jpg");*/
+  /*background-image: url(https://media.istockphoto.com/vectors/abstract-network-background-big-data-design-vector-id1327264496?b=1&k=20&m=1327264496&s=612x612&w=0&h=gAgVm-qUdKnLYwNZkwMTWdAgYYTvc6CDQNwlbCDiXE8=);*/
+  /*background-image: url(https://wallpaperbat.com/img/91414-space-art-minimal-hd-artist-4k-wallpaper-image-background.jpg);*/
+  /*background-image: url(https://fondosmil.com/fondo/10792.jpg);*/
+  background-image: url(https://i.pinimg.com/originals/f9/ae/ea/f9aeea2a1461e4d92fb3f736cdfc5c46.jpg);
+  background-size: cover;
 }

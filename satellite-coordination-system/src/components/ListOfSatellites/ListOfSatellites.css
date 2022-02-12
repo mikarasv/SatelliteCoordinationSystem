@@ -6,7 +6,7 @@
 
 .table_container {
   overflow-y: 1;
-  height: 80vh;
+  height: 78vh;
   width: 96%;
   margin-left: 2%;
   margin-top: 1%;
@@ -14,7 +14,7 @@
 }
 .table_container thead th {
   position: sticky;
-  background: steelblue;
+  background: #0c489c;
   color:#fff;
   font-size: 20px;
   top: 0;
@@ -24,7 +24,7 @@ table {
   width: 100%;
 }
 tbody{
-  background-color: transparent;
+  background: rgba(0,0,0,.5);
   overflow: auto;
   color: white;
 }
@@ -44,7 +44,7 @@ td {
 /* Tooltip container */
 .tooltip {
   position: relative;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
 /* Tooltip text */
@@ -87,7 +87,7 @@ td {
   text-align: center;
   height: 6vh;
   width: 50%;
-  background-color: steelblue;
+  background-color: #0c489c;
   border-radius: 15px;
   border: hidden;
   cursor: pointer;  

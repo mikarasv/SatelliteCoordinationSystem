@@ -110,7 +110,7 @@ export default function ListOfSattellites() {
                   <td className="satllite-image">
                     <img width="50" height="50" src={item.links.patch.small}/>
                   </td>
-                  <td>{(item.success && "Yes") || "No"}</td>
+                  <td>Yes</td>
                   <td>
                     <button id={item.id} className="more-info" 
                     onClick={() => openModal(item)}> +info </button>
