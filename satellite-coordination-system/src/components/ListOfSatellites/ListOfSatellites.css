@@ -24,7 +24,7 @@ table {
   width: 100%;
 }
 tbody{
-  background-image: url("https://wallpaperaccess.com/full/2217435.jpg");
+  background-color: transparent;
   overflow: auto;
   color: white;
 }
@@ -80,4 +80,16 @@ td {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.more-info {
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  text-align: center;
+  height: 6vh;
+  width: 50%;
+  background-color: steelblue;
+  border-radius: 15px;
+  border: hidden;
+  cursor: pointer;  
+  color: white;
 }

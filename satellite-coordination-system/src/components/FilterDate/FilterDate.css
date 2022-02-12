@@ -9,8 +9,8 @@
     font-size: 20px;
     padding: 5% 5%;
     border-radius: 15px;
-    background: steelblue;
     border: hidden;
+    background: steelblue;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

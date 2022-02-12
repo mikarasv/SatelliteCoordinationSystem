@@ -15,7 +15,7 @@ const Search = ({ searchQuery, setSearchQuery, placeholder }) => (
             placeholder={placeholder}
             // name="s" 
          />
-        <a href="#" class = "search-btn">
+        <a href="#" className = "search-btn">
         </a>
      </div>
 );

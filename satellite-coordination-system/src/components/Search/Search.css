@@ -43,7 +43,8 @@
   font-weight: normal;
   transition: 0.4s;
   line-height: 30px;
-  width: 0px;  
+  width: 0px;
+  color: white;
 }
 
 #inputID::placeholder {
