@@ -2,7 +2,8 @@
 Satellite coordination system that allows scientists to analyze active satellites.
 The system provides the ability to search by satellite name and has two types of filters: 
 - A date filter that allows to select a utc date and show only satellites launched after that.
-- A checkbox (switch) that allows to see only successful launches.
+- A checkbox (switch) that allows to see only successful launches.}
+
 The system shows the information in a table including the following information:
 - Name
 - UTC date
