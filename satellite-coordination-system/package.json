@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "expo-linear-gradient": "^11.0.2",
     "griddle-react": "^1.0.0",
+    "msw": "^0.36.8",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-collapse": "^5.1.1",
@@ -17,7 +18,8 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "react-select": "^5.2.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "whatwg-fetch": "^3.6.2"
   },
   "scripts": {
     "start": "react-scripts start",

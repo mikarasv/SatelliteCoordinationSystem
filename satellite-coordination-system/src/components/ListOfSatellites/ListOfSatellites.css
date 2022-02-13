@@ -106,10 +106,24 @@ td {
     border: 1px solid gray;
     border-radius: 10px !important;
     background: transparent;
+    margin-top: 25px;
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
   background: #0c489c;
   outline: 1px solid white !important;
   border-radius: 20px !important;
+}
+
+.not-found {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.not-found-description {
+  color: steelblue;
+  font-size: 40px;
+  text-shadow: 1px 1px 2px white;
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  margin-bottom: 1%;
 }

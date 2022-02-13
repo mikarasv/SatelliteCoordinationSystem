@@ -3,6 +3,9 @@ import Modal from "../Modal/Modal.js";
 import Switch from "../Switch/Switch.js";
 import Search from "../Search/Search.js";
 import FilterDate from "../FilterDate/FilterDate.js";
+import icon from '../Images/satellite.png';
+import icon2 from '../Images/not_found.png';
+import icon3 from '../Images/not_found2.png';
 import "./ListOfSatellites.css";
 
 export default function ListOfSattellites() {
@@ -50,6 +53,17 @@ export default function ListOfSattellites() {
     setInfo(item);
   }
 
+  const noInfo = () => {
+    return(
+      <div className="not-found">
+        <div className="not-found-description">
+          No satellite found
+        </div>
+        <img width="250" src={icon}/>
+      </div>
+    )
+  }
+
   //Used for filtering name and data
   const { search } = window.location;
   const query = new URLSearchParams(search).get('s');
@@ -90,6 +104,8 @@ export default function ListOfSattellites() {
         </div>
       </div>
       <div className="table_container">
+        {
+          filteredData.length == 0 && noInfo() ||
         <table className="table_fixed_header">
           <thead>
             <tr>
@@ -103,7 +119,7 @@ export default function ListOfSattellites() {
           <tbody>
             {filteredData.sort((a, b) => a.name.localeCompare(b.name))
               .map((item) => (
-                (value && item.success &&
+                (value && item.success && 
                 <tr key={item.id}>
                   <td>{item.name}</td>
                   <td>
@@ -140,7 +156,7 @@ export default function ListOfSattellites() {
               ))
             }
           </tbody>
-        </table>
+        </table> }
         <Modal isOpen={open} onClose={()=> setOpen(false)}>
           {info}
         </Modal>
