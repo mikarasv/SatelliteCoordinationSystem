@@ -93,3 +93,20 @@ td {
   cursor: pointer;  
   color: white;
 }
+
+::-webkit-scrollbar {
+    scroll-behavior: smooth !important;
+    width: 13px;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border: 1px solid gray;
+        border-radius: 10px !important;
+        background: transparent;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #0c489c;
+    outline: 1px solid white !important;
+    border-radius: 20px !important;
+    }

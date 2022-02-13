@@ -22,8 +22,16 @@ h1 {
 
 span {
   color: steelblue;
+  text-shadow: -1px -1px 1px #0c489c;
   font-weight: bold;
 }
+
+
+p {
+  display: block;
+  width: 75%;
+}
+
 
 .overlay-style {
   position: fixed;
@@ -36,7 +44,7 @@ span {
 }
 
 .img-position {
-  top: 4%;
+  top: 15%;
   right: 3%;
   position: absolute;
 }
@@ -47,10 +55,10 @@ span {
   top: -2%;
   width: 2rem;
   height: 2rem;
-  padding: 0.5rem;
   font-weight: bolder;
   margin: 0 auto;
   border-radius: 50%;
+  font-size: 20px;
   box-shadow: 1px 1px 1px #0000003a;
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.562);
@@ -60,10 +68,5 @@ span {
 
 .link-style {
   color: white;
-}
-
-p {
-  display: block;
-  width: 72%;
 }
 
