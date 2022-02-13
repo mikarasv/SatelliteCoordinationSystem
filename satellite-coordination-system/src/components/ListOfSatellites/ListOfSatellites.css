@@ -1,40 +1,3 @@
-.table_fixed_header{
-  font-family: Courier, "Lucida Console", monospace, cursive;
-  table-layout: fixed;
-  border-collapse: collapse;
-}
-
-.table_container {
-  overflow-y: 1;
-  height: 78vh;
-  width: 96%;
-  margin-left: 2%;
-  margin-top: 1%;
-  overflow-x: hidden;
-}
-.table_container thead th {
-  position: sticky;
-  background: #0c489c;
-  color:#fff;
-  font-size: 20px;
-  top: 0;
-}
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-tbody{
-  background: rgba(0,0,0,.5);
-  overflow: auto;
-  color: white;
-}
-td {
-  border: 1px solid gray;
-  padding: 0.5%;
-  text-align: center;
-  width: 5%;
-}
-
 .functional {
   display: flex;
   margin-left: 1.5%;
@@ -51,13 +14,12 @@ td {
 .tooltiptext {
   position: absolute;
   visibility: hidden;
-  width: 270px;
+  width: 250px;
   background-color: #555;
   color: #fff;
   text-align: center;
   padding: 5px 5px;
   border-radius: 6px;
-
   /* Fade in tooltip */
   opacity: 0;
   bottom: 115%;
@@ -82,6 +44,47 @@ td {
   opacity: 1;
 }
 
+.table_container {
+  overflow-y: 1;
+  height: 78vh;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 1%;
+  overflow-x: hidden;
+}
+
+.table_container thead th {
+  position: sticky;
+  background: #0c489c;
+  color:#fff;
+  font-size: 20px;
+  top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_fixed_header{
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+tbody{
+  background: rgba(0,0,0,.5);
+  overflow: auto;
+  color: white;
+}
+
+td {
+  border: 1px solid gray;
+  padding: 0.5%;
+  text-align: center;
+  width: 5%;
+}
+
 .more-info {
   font-family: Courier, "Lucida Console", monospace, cursive;
   text-align: center;
@@ -95,18 +98,18 @@ td {
 }
 
 ::-webkit-scrollbar {
-    scroll-behavior: smooth !important;
-    width: 13px;
-    }
-    /* Track */
-    ::-webkit-scrollbar-track {
-        border: 1px solid gray;
-        border-radius: 10px !important;
-        background: transparent;
-    }
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-    background: #0c489c;
-    outline: 1px solid white !important;
-    border-radius: 20px !important;
-    }
+  scroll-behavior: smooth !important;
+  width: 13px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border: 1px solid gray;
+    border-radius: 10px !important;
+    background: transparent;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+  background: #0c489c;
+  outline: 1px solid white !important;
+  border-radius: 20px !important;
+}

@@ -1,20 +1,20 @@
 .filter-date {
-    height: 80%;
-    width: 80%;
+  height: 80%;
+  width: 80%;
 }
 
 .date-input {
-    color: white;
-    font-size: 20px;
-    padding: 5% 5%;
-    border-radius: 15px;
-    border: hidden;
-    background: #0c489c;
+  color: white;
+  font-size: 20px;
+  padding: 5% 5%;
+  border-radius: 15px;
+  border: hidden;
+  background: #0c489c;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Calendar_Icon_White.svg/1200px-Calendar_Icon_White.svg.png); 
-    background-repeat: no-repeat;
-    height: 20px;
-    background-size: contain;
+  background: url(../Images/calendar.png); 
+  background-repeat: no-repeat;
+  height: 20px;
+  background-size: contain;
 }

@@ -13,24 +13,7 @@
 }
 
 .search-box:hover > .search-btn{
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHaFbU4mtvdf4RuPvz9sHqmgQJoCea8EzVJg&usqp=CAU");
-}
-
-.search-btn {
-  float: right;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHaFbU4mtvdf4RuPvz9sHqmgQJoCea8EzVJg&usqp=CAU");
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-  cursor: pointer;  
-}
-.search-btn > i {
-  font-size: 20px;
+  background-image: url(../Images/search_icon.png);
 }
 
 .search-text {
@@ -47,7 +30,21 @@
   color: white;
 }
 
+.search-btn {
+  float: right;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: url(../Images/search_icon.png);
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;  
+}
+
 #inputID::placeholder {
-    color: white;
-    opacity: 0.5;
+  color: white;
+  opacity: 0.5;
 }

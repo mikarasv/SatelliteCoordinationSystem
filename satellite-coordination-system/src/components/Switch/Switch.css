@@ -1,3 +1,7 @@
+.switch {
+  display: flex;
+}
+
 .react-switch-checkbox {
   margin: 0;
   visibility: hidden;
@@ -39,8 +43,4 @@
 
 .react-switch-label:active .react-switch-button {
   width: 50px;
-}
-
-.switch {
-  display: flex;
 }
