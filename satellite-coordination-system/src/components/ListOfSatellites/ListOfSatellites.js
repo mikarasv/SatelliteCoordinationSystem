@@ -62,7 +62,6 @@ export default function ListOfSattellites() {
   const [open, setOpen] = useState(false)
   const [info, setInfo] = useState([])
 
-
   return (
     <div>
       <div className="functional">
@@ -73,17 +72,16 @@ export default function ListOfSattellites() {
         />
         <div className="tooltip">
           <span className="tooltiptext">
-            Search for satellites launched after utc date:
+            Click on calendar or search for satellites launched after utc date:
           </span>
           <FilterDate
             searchQuery={searchDate}
             setSearchQuery={setSearchDate}
-            placeholder="Search for launched after utc date"
           />
         </div>
         <div className="tooltip">
           <span className="tooltiptext">
-            Show only succesful satellites
+            Show only successful satellites
           </span>
           <Switch
             isOn ={value}
@@ -98,7 +96,7 @@ export default function ListOfSattellites() {
               <th>Name</th>
               <th>UTC Date</th>
               <th>Patch</th>
-              <th>Succesful</th>
+              <th>Successful</th>
               <th>More</th>
             </tr>
           </thead>
