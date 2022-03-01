@@ -1,16 +1,15 @@
 import {React, useEffect, useState} from 'react';
 import Switch from "../Switch/Switch.js";
 import Search from "../Search/Search.js";
+import SortDate from "../SortDate/SortDate.js";
 import FilterDate from "../FilterDate/FilterDate.js";
 import Table from "../Table/Table.js";
-import icon from '../Images/satellite.png';
-import icon2 from '../Images/not_found.png';
-import icon3 from '../Images/not_found2.png';
 import "./ListOfSatellites.css";
 
 export default function ListOfSattellites() {
   const [list, setList] = useState([]);      //Used to save fetched data
   const [value, setValue] = useState(false);  //used for switch
+  const [sortDate, setSortDate] = useState(false);  //used for switch
 
   useEffect(()=>{
     fetch('https://api.spacexdata.com/v5/launches/')
@@ -48,22 +47,18 @@ export default function ListOfSattellites() {
     });
   };
 
-  const filterSwitch = (dates, bool) => {
+  const filterSwitch = (dates) => {
     return dates.filter((item) => {
-        return value && item.success || !value;
+        return value ? item.success : item;
     });
   };
 
-  const noInfo = () => {
-    return(
-      <div className="not-found">
-        <div className="not-found-description">
-          No satellite found
-        </div>
-        <img width="250" src={icon}/>
-      </div>
-    )
-  }
+  const sortByDate = (dates) => {
+    return sortDate ? 
+      dates.sort((a, b) => a.date_utc.localeCompare(b.date_utc))
+      : dates.sort((a, b) =>  a.name.localeCompare(b.name));
+    ;
+  };
 
   //Used for filtering name and data
   const { search } = window.location;
@@ -72,7 +67,8 @@ export default function ListOfSattellites() {
   const [searchDate, setSearchDate] = useState(query || '');
   var filteredData = filterNames(list, searchName);
   filteredData = filterDates(filteredData, searchDate);
-  filteredData = filterSwitch(filteredData, value);
+  filteredData = filterSwitch(filteredData);
+  filteredData = sortByDate(filteredData);
 
   return (
     <div>
@@ -100,10 +96,18 @@ export default function ListOfSattellites() {
             handleToggle= {() => setValue(!value)}
           />
         </div>
+        <div className="tooltip">
+          <span className="tooltiptext">
+            Sort by date
+          </span>
+          <SortDate
+            isOn ={sortDate}
+            handleToggle= {() => setSortDate(!sortDate)}
+          />
+        </div>
       </div>
       <Table
         filteredData = {filteredData}
-        noInfo={noInfo}
       />
     </div>
   )

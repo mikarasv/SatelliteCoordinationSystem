@@ -73,16 +73,3 @@
   outline: 1px solid white !important;
   border-radius: 20px !important;
 }
-
-.not-found {
-  text-align: center;
-  margin-top: 5%;
-}
-
-.not-found-description {
-  color: steelblue;
-  font-size: 40px;
-  text-shadow: 1px 1px 2px white;
-  font-family: Courier, "Lucida Console", monospace, cursive;
-  margin-bottom: 1%;
-}

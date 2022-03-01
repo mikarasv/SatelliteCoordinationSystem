@@ -1,8 +1,11 @@
 import {React, useState} from 'react'
 import Modal from "../Modal/Modal.js";
 import './Table.css'
+import icon from '../Images/satellite.png';
+import icon2 from '../Images/not_found.png';
+import icon3 from '../Images/not_found2.png';
 
-export default function Table({filteredData, noInfo}) {
+export default function Table({filteredData}) {
   //Used for modal
   const [open, setOpen] = useState(false)
   const [info, setInfo] = useState([])
@@ -10,6 +13,17 @@ export default function Table({filteredData, noInfo}) {
   const openModal = (item) => {
     setOpen(true);
     setInfo(item);
+  }
+
+  const noInfo = () => {
+    return(
+      <div className="not-found">
+        <div className="not-found-description">
+          No satellite found
+        </div>
+        <img width="250" src={icon}/>
+      </div>
+    )
   }
 
   return (
@@ -27,7 +41,7 @@ export default function Table({filteredData, noInfo}) {
             </tr>
           </thead>
           <tbody>
-            {filteredData.sort((a, b) => a.name.localeCompare(b.name))
+            {filteredData
               .map((item) => (
                 <tr key={item.id}>
                   <td>{item.name}</td>
