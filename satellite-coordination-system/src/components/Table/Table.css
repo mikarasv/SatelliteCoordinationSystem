@@ -1,0 +1,40 @@
+.table_container {
+  overflow-y: 1;
+  height: 78vh;
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 1%;
+  overflow-x: hidden;
+}
+
+.table_container thead th {
+  position: sticky;
+  background: #0c489c;
+  color:#fff;
+  font-size: 20px;
+  top: 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table_fixed_header{
+  font-family: Courier, "Lucida Console", monospace, cursive;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+tbody{
+  background: rgba(0,0,0,.5);
+  overflow: auto;
+  color: white;
+}
+
+td {
+  border: 1px solid gray;
+  padding: 0.5%;
+  text-align: center;
+  width: 5%;
+}

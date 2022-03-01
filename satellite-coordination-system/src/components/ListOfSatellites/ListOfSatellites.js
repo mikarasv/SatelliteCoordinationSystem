@@ -1,8 +1,8 @@
 import {React, useEffect, useState} from 'react';
-import Modal from "../Modal/Modal.js";
 import Switch from "../Switch/Switch.js";
 import Search from "../Search/Search.js";
 import FilterDate from "../FilterDate/FilterDate.js";
+import Table from "../Table/Table.js";
 import icon from '../Images/satellite.png';
 import icon2 from '../Images/not_found.png';
 import icon3 from '../Images/not_found2.png';
@@ -35,7 +35,7 @@ export default function ListOfSattellites() {
     }
     return names.filter((item) => {
         const postItem = item.name.toLowerCase();
-        return postItem.includes(query) || item.name.includes(query);
+        return postItem.substr(0, query.length).includes(query.toLowerCase());
     });
   };
 
@@ -48,10 +48,11 @@ export default function ListOfSattellites() {
     });
   };
 
-  const openModal = (item) => {
-    setOpen(true);
-    setInfo(item);
-  }
+  const filterSwitch = (dates, bool) => {
+    return dates.filter((item) => {
+        return value && item.success || !value;
+    });
+  };
 
   const noInfo = () => {
     return(
@@ -71,10 +72,7 @@ export default function ListOfSattellites() {
   const [searchDate, setSearchDate] = useState(query || '');
   var filteredData = filterNames(list, searchName);
   filteredData = filterDates(filteredData, searchDate);
-
-  //Used for modal
-  const [open, setOpen] = useState(false)
-  const [info, setInfo] = useState([])
+  filteredData = filterSwitch(filteredData, value);
 
   return (
     <div>
@@ -103,64 +101,10 @@ export default function ListOfSattellites() {
           />
         </div>
       </div>
-      <div className="table_container">
-        {
-          filteredData.length == 0 && noInfo() ||
-        <table className="table_fixed_header">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>UTC Date</th>
-              <th>Patch</th>
-              <th>Successful</th>
-              <th>More</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.sort((a, b) => a.name.localeCompare(b.name))
-              .map((item) => (
-                (value && item.success && 
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>
-                    {item.date_utc.substr(0, 4) + "/" +item.date_utc.substr(5, 2)
-                    + "/" + item.date_utc.substr(8, 2) + " - " +
-                    item.date_utc.substr(11, 5)}</td>
-                  <td>
-                    <img width="50" height="50" src={item.links.patch.small}/>
-                  </td>
-                  <td>Yes</td>
-                  <td>
-                    <button className="more-info" onClick={() => openModal(item)}>
-                      +info 
-                    </button>
-                  </td>
-                </tr>) || 
-                (!value &&
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>
-                    {item.date_utc.substr(0, 4) + "/" +item.date_utc.substr(5, 2)
-                    + "/" + item.date_utc.substr(8, 2) + " - " +
-                    item.date_utc.substr(11, 5)}</td>
-                  <td>
-                    <img width="50" height="50" src={item.links.patch.small}/>
-                  </td>
-                  <td>{(item.success && "Yes") || "No"}</td>
-                  <td>
-                    <button className="more-info" onClick={() => openModal(item)}>
-                      +info
-                    </button>
-                  </td>
-                </tr>)
-              ))
-            }
-          </tbody>
-        </table> }
-        <Modal isOpen={open} onClose={()=> setOpen(false)}>
-          {info}
-        </Modal>
-      </div>
+      <Table
+        filteredData = {filteredData}
+        noInfo={noInfo}
+      />
     </div>
   )
 }
